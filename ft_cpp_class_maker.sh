@@ -8,6 +8,10 @@ clr_red="\033[1;31m"
 clr_green="\033[1;32m"
 reset="\033[0m"
 
+if [ -z "$name" ]; then
+	exit 1
+fi
+
 if [ -f "$hppfile" ]; then
 	echo -e "❌${clr_red} Class $name already exists.${reset}"
 	exit 1
