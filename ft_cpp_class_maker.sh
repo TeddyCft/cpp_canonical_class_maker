@@ -37,7 +37,7 @@ class $name
 
 #endif" > $hppfile
 
-echo "#include "$name.hpp"
+echo '#include "$name.hpp"
 
 //= Operator overloader
 $name	&$name::operator=(const $name& og)
@@ -56,6 +56,6 @@ $name::$name(void) : _nb(0)
 
 //Destructor
 $name::~$name(void)
-{}" > $cppfile
+{}' > $cppfile
 
 echo -e "✅${clr_green} Class $name successfully created !${reset}"
