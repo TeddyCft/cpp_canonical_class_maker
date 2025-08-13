@@ -42,7 +42,7 @@ echo "#include "$name.hpp"
 //= Operator overloader
 $name	&$name::operator=(const $name& og)
 {
-	this->_nb = og._nb;
+	//copy datas
 	return (*this);
 }
 
