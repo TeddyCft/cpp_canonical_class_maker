@@ -28,7 +28,7 @@ class $name
 
 	$name(void);
 	$name(const $name &copy);
-	$name &operator=(const $name& og);
+	$name &operator=(const $name &og);
 	~$name(void);
 
 	private:
@@ -40,15 +40,15 @@ class $name
 echo "#include "'"'$name.hpp'"'"
 
 //= Operator overloader
-$name	&$name::operator=(const $name& og)
+$name	&$name::operator=(const $name &og)
 {
 	//copy datas
 	return (*this);
 }
 
 //Copy constructor
-$name::$name(const $name &copy)// : args(copy.args), ...
-{}
+$name::$name(const $name &copy)
+{ *this = copy ; }
 
 //Default constructor
 $name::$name(void)// : args(0), ...
