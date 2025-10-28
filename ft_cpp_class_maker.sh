@@ -1,7 +1,7 @@
 #!/bin/bash
 
 read -p "Class name ? " name
-hppfile="includes/$name.hpp"
+hppfile="src/class/$name.hpp"
 cppfile="src/class/$name.cpp"
 guard="${name^^}_HPP"
 clr_red="\033[1;31m"
@@ -24,15 +24,14 @@ echo "#ifndef $guard
 
 class $name
 {
+	private:
+
 	public:
 
 	$name(void);
 	$name(const $name &copy);
 	$name &operator=(const $name &og);
 	~$name(void);
-
-	private:
-
 }		;
 
 #endif" > $hppfile
