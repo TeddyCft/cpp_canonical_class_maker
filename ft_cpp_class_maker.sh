@@ -17,7 +17,7 @@ if [ -f "$hppfile" ]; then
 	exit 1
 fi
 
-mkdir -p src/class includes
+mkdir -p src/class
 touch $hppfile $cppfile
 echo "#ifndef $guard
 #define $guard
